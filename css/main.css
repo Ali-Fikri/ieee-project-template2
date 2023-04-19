@@ -1002,8 +1002,97 @@ header nav .form i {
     flex-direction: column;
   }
 }
-
 /* End Subscribe */
+
+/*------------------ Start Contact ------------------*/
+#contact-us {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+#contact-us .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  #contact-us .content {
+    flex-direction: column;
+  }
+}
+
+#contact-us form {
+  flex-basis: 70%;
+}
+
+#contact-us form .main-input {
+  display: block;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+#contact-us form .main-input:focus {
+  outline: none;
+}
+
+#contact-us form textarea.main-input {
+  height: 200px;
+  resize: none;
+}
+
+#contact-us form button {
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  border: none;
+  text-transform: uppercase;
+  display: flex;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+#contact-us .info {
+  flex-basis: 25%;
+}
+
+@media (max-width: 767px) {
+  #contact-us .info {
+    order: -1;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+#contact-us .info h4 {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#contact-us .info .phone {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+#contact-us .info .address h4 {
+  margin-top: 90px;
+}
+
+@media (max-width: 767px) {
+  #contact-us .info .address h4 {
+    margin-top: 30px;
+  }
+}
+
+#contact-us .info address {
+  color: var(--text-color);
+  line-height: 2;
+}
+/*------------------ End   Contact ------------------*/
 
 /* Start Footer */
 .footer {
@@ -1057,4 +1146,3 @@ header nav .form i {
 }
 
 /* End Footer */
-
