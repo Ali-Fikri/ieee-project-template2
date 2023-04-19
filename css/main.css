@@ -223,14 +223,14 @@ header nav .form i {
 /*=================================================================*/
 
 /*-------------------------- Start Landing ---------------------*/
-.landing {
+#landing {
   position: relative;
   height: 100vh;
   background-color: var(--main-color);
   background-image: url(/images/landing.jpg);
 }
 
-.landing::before {  /* Overlay */
+#landing::before {  /* Overlay */
   content: "";
   position: absolute;
   width: 100%;
@@ -238,7 +238,7 @@ header nav .form i {
   background-color: rgb(0 0 0 / 60%);
 }
 
-.landing .text {
+#landing .text {
   position: absolute;
   left: 0;
   top: 50%;
@@ -254,34 +254,34 @@ header nav .form i {
   -o-transform: translateY(-50%);
 }
 
-.landing .text .content {
+#landing .text .content {
   max-width: 500px;
   color: white;
 }
 
 /* Mobile Devices */
 @media (max-width: 767px) {
-  .landing .text {
+  #landing .text {
     width: 100%;
   }
 
-  .landing .text .content {
+  #landing .text .content {
     max-width: 100%;
   }
 }
 
-.landing .text .content h2 {
+#landing .text .content h2 {
   font-size: 32px;
   font-weight: normal;
   line-height: 1.5;
 }
 
-.landing .text .content p {
+#landing .text .content p {
   font-size: 14px;
   line-height: 2;
 }
 
-.landing .change-background {
+#landing .change-background {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -292,26 +292,26 @@ header nav .form i {
   -o-transform: translateY(-50%);
 }
 
-.landing .change-background.angle-left {
+#landing .change-background.angle-left {
   left: 30px;
 }
 
-.landing .change-background.angle-right {
+#landing .change-background.angle-right {
   right: 30px;
 }
 
 /* Mobile Devices */
 @media (max-width: 767px) {
-  .landing .change-background.angle-left {
+  #landing .change-background.angle-left {
     left: 15px;
   }
 
-  .landing .change-background.angle-right {
+  #landing .change-background.angle-right {
     right: 15px;
   }
 }
 
-.landing .bullets {
+#landing .bullets {
   position: absolute;
   display: flex;
   bottom: 30px;
@@ -323,7 +323,7 @@ header nav .form i {
   -o-transform: translateX(-50%);
 }
 
-.landing .bullets li {
+#landing .bullets li {
   width: 20px;
   height: 20px;
   margin: 0 5px;
@@ -335,7 +335,7 @@ header nav .form i {
   -o-border-radius: 50%;
 }
 
-.landing .bullets li.active {
+#landing .bullets li.active {
   background-color: var(--main-color);
 }
 /*-------------------------- End Landing ---------------------*/
@@ -464,6 +464,107 @@ header nav .form i {
 
 /*=================================================================*/
 
+/* ---------------------- Start Portfolio ---------------------- */
+#portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+#portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+}
+
+#portfolio .shuffle li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#portfolio .shuffle li.active {
+  color: white;
+  background-color: var(--main-color);
+}
+
+#portfolio .imgs-container {
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#portfolio .imgs-container .box {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Tablet Devices */
+@media (min-width: 678px) {
+  #portfolio .imgs-container .box {
+    flex-basis: 50%;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 678px) {
+  #portfolio .imgs-container .box {
+    flex-basis: 25%;
+  }
+}
+
+#portfolio .imgs-container .box .box-image {
+  max-width: 100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+#portfolio .imgs-container .box-caption {
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+/* On Box Hover */
+#portfolio .imgs-container .box:hover .box-image {
+  transform: rotateZ(3deg) scale(1.1);
+  -webkit-transform: rotateZ(3deg) scale(1.1);
+  -moz-transform: rotateZ(3deg) scale(1.1);
+  -ms-transform: rotateZ(3deg) scale(1.1);
+  -o-transform: rotateZ(3deg) scale(1.1);
+}
+
+#portfolio .imgs-container .box:hover .box-caption {
+  bottom: 0;
+}
+
+#portfolio .imgs-container .box .box-caption .title {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+#portfolio .imgs-container .box .box-caption .description {
+  color: var(--main-color);
+}
+
+#portfolio a.more {
+  text-decoration: none;
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 30px;
+  margin: 20px auto;
+  display: block;
+  width: fit-content;
+}
+/* ---------------------- End Portfolio ------------------------ */
 
 /* Start Stats */
 .stats {
