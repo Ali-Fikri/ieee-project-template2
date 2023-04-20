@@ -461,71 +461,6 @@ header nav .form i {
   font-weight: 900;
   margin-right: 20px;
 }
-
-/*=================================================================*/
-/*================================ Start Video ====================*/
-.video{
-  position: relative;
-}
-.video::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0 0 0 / 40%);
-}
-.video video{
-  width: 100%;
-}
-.video .text{
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  padding: 50px;
-  background-color: var(--transparent-color);
-  color: white;
-}
-.video .text h2{
-  margin: 0 0 30px;
-  text-transform: uppercase;
-  font-weight: normal;
-}
-.video .text p{
-  margin-bottom: 30px;
-}
-.video .text button{
-  background-color: black;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-/*=================================================================*/
-/*================================ Start About ====================*/
-.about{
-  padding-top:var(--section-padding) ;
-  overflow: hidden;
-  text-align: center;
-}
-.about img{
-  position: relative;
-  bottom: -120px;
-  margin-top: -120px;
-  max-width: 100%;
-}
-@media (max-width: 767px){
-  .about img{
-    bottom: -60px;
-    margin-top: -60px;
-  }
-}
-/*=================================================================*/
-
 /*=================================================================*/
 
 /* ---------------------- Start Portfolio ---------------------- */
@@ -736,21 +671,43 @@ header nav .form i {
 }
 
 #our-skills .testimonials .content {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 570px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 #our-skills .testimonials .content .slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  position: absolute;
+  width: 100%;
+  height: 370px;
+  overflow: hidden;
+  position: relative;
 }
 
 #our-skills .testimonials .content .slider .slide {
-  flex: 1 0 100%;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#our-skills .testimonials .content .slider .slide.prev {
+  left: -100%;
+}
+
+#our-skills .testimonials .content .slider .slide.next {
+  left: -100%;
+}
+
+#our-skills .testimonials .content .slider .slide.active {
+  opacity: 1;
 }
 
 #our-skills .testimonials .content .person {
@@ -798,7 +755,7 @@ header nav .form i {
   justify-content: center;
 }
 
-#our-skills .testimonials .bullets .bullet {
+#our-skills .testimonials .bullets li {
   width: 15px;
   height: 15px;
   margin: 0 5px;
@@ -810,7 +767,7 @@ header nav .form i {
   -o-border-radius: 50%;
 }
 
-#our-skills .testimonials .bullets .bullet.active {
+#our-skills .testimonials .bullets li.active {
   background-color: var(--main-color);
   border-color: var(--main-color);
 }
@@ -1221,4 +1178,3 @@ header nav .form i {
 }
 
 /* End Footer */
-
